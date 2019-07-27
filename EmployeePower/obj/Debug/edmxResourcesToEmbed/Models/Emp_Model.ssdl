@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_Emp_PowerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tbl_Employee_Login_Details">
+    <Key>
+      <PropertyRef Name="Emp_ID" />
+    </Key>
+    <Property Name="Emp_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Emp_FirstName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Emp_LastName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Emp_Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Emp_Email_Confirm" Type="bit" />
+    <Property Name="Emp_MobileNo" Type="int" />
+    <Property Name="Emp_MobilieNo_Confirm" Type="bit" />
+    <Property Name="Emp_Alt_MobileNo" Type="int" />
+    <Property Name="Emp_Password_Hash" Type="nvarchar" MaxLength="255" />
+    <Property Name="Emp_Account_Status" Type="varchar" MaxLength="100" />
+    <Property Name="Emp_Created_By" Type="nvarchar" MaxLength="255" />
+    <Property Name="Emp_Created_Date" Type="datetime" />
+    <Property Name="Emp_Updated_By" Type="nvarchar" MaxLength="255" />
+    <Property Name="Emp_Updated_Date" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="DB_Emp_PowerModelStoreContainer">
+    <EntitySet Name="Tbl_Employee_Login_Details" EntityType="Self.Tbl_Employee_Login_Details" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

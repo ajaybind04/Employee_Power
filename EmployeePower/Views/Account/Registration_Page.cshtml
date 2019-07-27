@@ -1,0 +1,76 @@
+﻿@model EmployeePower.Models.Tbl_Employee_Login_Details
+
+@{
+    ViewBag.Title = "Registration_Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registration Details</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Create Account For Using Employee Power Resources</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label("First name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Emp_FirstName, new { htmlAttributes = new { placeholder="First Name", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Emp_FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Last Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Emp_LastName, new { htmlAttributes = new { placeholder= "Last Name", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Emp_LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Email ID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Emp_Email, new { htmlAttributes = new { placeholder = "Email ID", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Emp_Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Mobile No", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Emp_MobileNo, new { htmlAttributes = new { placeholder = "Mobile No", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Emp_MobileNo, "", new { @class = "text-danger" })
+            </div>
+        </div>       
+
+        <div class="form-group">
+            @Html.Label("Alt Mobile No", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Emp_Alt_MobileNo, new { placeholder = "Alternate Mobile No", htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Emp_Alt_MobileNo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Password", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Emp_Password_Hash, new { placeholder = "Password", htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Emp_Password_Hash, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create Account" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to Login", "Login_Page")
+</div>

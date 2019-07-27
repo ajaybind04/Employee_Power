@@ -1,0 +1,123 @@
+﻿@model EmployeePower.Models.Tbl_Employee_Login_Details
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tbl_Employee_Login_Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Email_Confirm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Email_Confirm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_MobileNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_MobileNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_MobilieNo_Confirm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_MobilieNo_Confirm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Alt_MobileNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Alt_MobileNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Password_Hash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Password_Hash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Account_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Account_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Created_By)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Created_By)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Created_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Created_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Updated_By)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Updated_By)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Updated_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Updated_Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Emp_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

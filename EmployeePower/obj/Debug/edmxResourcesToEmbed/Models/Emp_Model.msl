@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_Emp_PowerModelStoreContainer" CdmEntityContainer="DB_Emp_PowerEntities">
+    <EntitySetMapping Name="Tbl_Employee_Login_Details">
+      <EntityTypeMapping TypeName="DB_Emp_PowerModel.Tbl_Employee_Login_Details">
+        <MappingFragment StoreEntitySet="Tbl_Employee_Login_Details">
+          <ScalarProperty Name="Emp_ID" ColumnName="Emp_ID" />
+          <ScalarProperty Name="Emp_FirstName" ColumnName="Emp_FirstName" />
+          <ScalarProperty Name="Emp_LastName" ColumnName="Emp_LastName" />
+          <ScalarProperty Name="Emp_Email" ColumnName="Emp_Email" />
+          <ScalarProperty Name="Emp_Email_Confirm" ColumnName="Emp_Email_Confirm" />
+          <ScalarProperty Name="Emp_MobileNo" ColumnName="Emp_MobileNo" />
+          <ScalarProperty Name="Emp_MobilieNo_Confirm" ColumnName="Emp_MobilieNo_Confirm" />
+          <ScalarProperty Name="Emp_Alt_MobileNo" ColumnName="Emp_Alt_MobileNo" />
+          <ScalarProperty Name="Emp_Password_Hash" ColumnName="Emp_Password_Hash" />
+          <ScalarProperty Name="Emp_Account_Status" ColumnName="Emp_Account_Status" />
+          <ScalarProperty Name="Emp_Created_By" ColumnName="Emp_Created_By" />
+          <ScalarProperty Name="Emp_Created_Date" ColumnName="Emp_Created_Date" />
+          <ScalarProperty Name="Emp_Updated_By" ColumnName="Emp_Updated_By" />
+          <ScalarProperty Name="Emp_Updated_Date" ColumnName="Emp_Updated_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

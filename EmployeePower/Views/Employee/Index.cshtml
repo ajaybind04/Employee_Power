@@ -1,0 +1,106 @@
+﻿@model IEnumerable<EmployeePower.Models.Tbl_Employee_Login_Details>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Email_Confirm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_MobileNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_MobilieNo_Confirm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Alt_MobileNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Password_Hash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Account_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Created_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Created_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Updated_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Updated_Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Email_Confirm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_MobileNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_MobilieNo_Confirm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Alt_MobileNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Password_Hash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Account_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Created_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Created_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Updated_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Updated_Date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Emp_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Emp_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Emp_ID })
+        </td>
+    </tr>
+}
+
+</table>
